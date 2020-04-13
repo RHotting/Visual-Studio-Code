@@ -14,7 +14,7 @@
         /* Button used to open the chat form - fixed at the bottom of the page */
         
         .open-button {
-            background-color: #02244B;
+            background-color: #0f44fd;
             color: white;
             padding: 16px 20px;
             border: none;
@@ -51,7 +51,7 @@
             border: none;
             background: #f1f1f1;
             resize: none;
-            min-height: 200px;
+            min-height: 150px;
         }
         /* When the textarea gets focus, do something */
         
@@ -74,7 +74,7 @@
         /* Add a red background color to the cancel button */
         
         .form-container .cancel {
-            background-color: #02244B;
+            background-color: #0f44fd;
         }
         /* Add some hover effects to buttons */
         
@@ -86,7 +86,6 @@
 </head>
 
 <body>
-
     <h2>Popup Chat Window</h2>
     <p>Click on the button at the bottom of this page to open the chat form.</p>
     <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
@@ -99,21 +98,17 @@
 
             <label for="msg"><b>Laat hier uw mening achter over de website van DASC B.V.</b></label>
             <textarea placeholder="Type hier uw bericht..." name="msg" required></textarea>
+            <iframe src="https://survey.dasc.nl/mrIWeb/mrIWeb.dll?I.Project=IFRAME_TRYOUT&i.test=1" name="iframe_a" style="height:200px;width:100%;border:none;"></iframe>
+            <p>
+                <a href="https://survey.dasc.nl/mrIWeb/mrIWeb.dll?I.Project=IFRAME_TRYOUT&i.test=1" target="iframe_a"></a>
+            </p>
 
             <button type="submit" class="btn">Verzenden</button>
             <button type="button" class="btn cancel" onclick="closeForm()">Sluiten</button>
         </form>
     </div>
 
-    <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
-    </script>
+    <script src="open_closeForm.js"></script>
 
 </body>
 
