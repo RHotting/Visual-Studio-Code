@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="popup_stylesheet" type="css" href="popup_stylesheet.css">
+</head>
+
+<body>
+    <h2>Popup Chat Window</h2>
+    <p>Click on the button at the bottom of this page to open the chat form.</p>
+    <p>Note that the button and the form is fixed - they will always be positioned to the bottom of the browser window.</p>
+
+    <button class="open-button" onclick="openForm()">Uw mening</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Uw mening</h1>
+
+            <label for="msg"><b>Laat hier uw mening achter over de website van DASC B.V.</b></label>
+            <textarea placeholder="Type hier uw bericht..." name="msg" required></textarea>
+            <iframe src="https://survey.dasc.nl/mrIWeb/mrIWeb.dll?I.Project=IFRAME_TRYOUT&i.test=1" name="iframe_a" style="height:200px;width:100%;border:none;"></iframe>
+            <p>
+                <a href="https://survey.dasc.nl/mrIWeb/mrIWeb.dll?I.Project=IFRAME_TRYOUT&i.test=1" target="iframe_a"></a>
+            </p>
+
+            <button type="submit" class="btn">Verzenden</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Sluiten</button>
+        </form>
+    </div>
+
+    <script src="open_closeForm.js"></script>
+
+</body>
+
+</html>
