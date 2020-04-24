@@ -32,6 +32,16 @@
 
     <script src="open_closeForm.js"></script>
 
+    <script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
+    <script>
+        window.loadWatsonAssistantChat({
+            integrationID: "3863c4e1-8650-41ce-bcd7-d0c00b2c76a9", // The ID of this integration.
+            region: "eu-gb" // The region your integration is hosted in.
+        }).then(function(instance) {
+            instance.render();
+        });
+    </script>
+
 </body>
 
 </html>

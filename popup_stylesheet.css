@@ -1,5 +1,5 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+body .serif {
+    font-family: "Times New Roman", Times, serif;
 }
 
 * {
@@ -10,16 +10,26 @@ body {
 /* Button used to open the chat form - fixed at the bottom of the page */
 
 .open-button {
-    background-color: #0f44fd;
-    color: white;
+    display: inline-block;
+    background-color: rgb(15, 68, 253);
+    color: #ffffff;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 150px;
+    bottom: 30px;
+    right: 100px;
+    width: 110px;
+    box-shadow: 0 -1.5px 3px rgba(0, 0, 0, 0.18), 1.5px 0px 3px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s;
+    border-radius: 2px;
+    font-weight: bold;
+    animation: scale-in-bottom .25s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.open-button.scale-in-bottom {
+    animation: scale-in-bottom .25s cubic-bezier(.25, .46, .45, .94)
 }
 
 
@@ -29,7 +39,7 @@ body {
     display: none;
     position: fixed;
     bottom: 0;
-    right: 15px;
+    right: 100px;
     border: 3px solid #f1f1f1;
     z-index: 9;
 }
@@ -51,7 +61,7 @@ body {
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
-    background: #f1f1f1;
+    background: #f2f2f2;
     resize: none;
     min-height: 150px;
 }
@@ -82,7 +92,7 @@ body {
 /* Add a red background color to the cancel button */
 
 .form-container .cancel {
-    background-color: #0f44fd;
+    background-color: rgb(15, 68, 253);
 }
 
 
@@ -91,4 +101,5 @@ body {
 .form-container .btn:hover,
 .open-button:hover {
     opacity: 1;
+    animation: scale-in-bottom .25s cubic-bezier(.25, .46, .45, .94) both;
 }
