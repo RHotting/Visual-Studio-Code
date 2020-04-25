@@ -13,27 +13,44 @@
             color: #FFFFFF;
             padding: 16px 20px;
             border: none;
-            cursor: pointer;
-            opacity: 0.8;
+            opacity: 0.85;
             position: fixed;
             bottom: 30px;
             right: 100px;
             width: 110px;
             box-shadow: 0 -1.5px 3px rgba(0, 0, 0, 0.18), 1.5px 0px 3px rgba(0, 0, 0, 0.23);
-            transition: all 0.3s;
+            transition: all 0.3s linear;
             border-radius: 2px;
             font-weight: bold;
             animation: animatebottom 0.30s;
+            cursor: pointer;
         }
         
         @keyframes animatebottom {
-            from {
+            0% {
+                background-color: rgb(3, 60, 240);
+                right: 100px;
                 bottom: -100px;
-                opacity: 100
             }
-            to {
+            25% {
+                background-color: rgb(3, 60, 240);
+                right: 100px;
+                bottom: 7.5px;
+            }
+            50% {
+                background-color: rgb(3, 60, 240);
+                right: 100px;
+                bottom: 15px;
+            }
+            75% {
+                background-color: rgb(3, 60, 240);
+                right: 100px;
+                bottom: 22.5px;
+            }
+            100% {
+                background-color: rgb(3, 60, 240);
+                right: 100px;
                 bottom: 30px;
-                opacity: 1
             }
         }
         /* The popup chat - hidden by default */
@@ -92,5 +109,4 @@
         .form-container .btn:hover,
         .open-button:hover {
             opacity: 1;
-            animation: scale-in-bottom .25s cubic-bezier(.25, .46, .45, .94) both;
         }
