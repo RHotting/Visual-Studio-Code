@@ -22,7 +22,7 @@
             transition: all 0.3s linear;
             border-radius: 2px;
             font-weight: bold;
-            animation: animatebottom 0.30s;
+            animation: animatebottom 0.35s;
             cursor: pointer;
         }
         
