@@ -1,5 +1,5 @@
         body .serif {
-            font-family: "Times New Roman", Times, serif;
+            font-family: "sans-serif"
         }
         
         * {
@@ -17,7 +17,7 @@
             position: fixed;
             bottom: 30px;
             right: 100px;
-            width: 110px;
+            width: 120px;
             box-shadow: 0 -1.5px 3px rgba(0, 0, 0, 0.18), 1.5px 0px 3px rgba(0, 0, 0, 0.23);
             transition: all 0.3s linear;
             border-radius: 2px;
@@ -58,51 +58,63 @@
         .chat-popup {
             display: none;
             position: fixed;
-            bottom: 0;
+            bottom: 20px;
             right: 100px;
             border: 3px solid #f1f1f1;
             z-index: 9;
+            box-shadow: 0 -1.5px 3px rgba(0, 0, 0, 0.18), 1.5px 0px 3px rgba(0, 0, 0, 0.23);
         }
         /* Add styles to the form container */
         
         .form-container {
-            max-width: 300px;
+            max-width: 400px;
             padding: 10px;
-            background-color: white;
+            background-color: rgb(241, 241, 241);
+            opacity: 3;
         }
         /* Full-width textarea */
         
         .form-container textarea {
             width: 100%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
+            padding: 10px;
+            border-width: 20px;
+            border-color: rgb(249, 179, 13);
+            margin: 5px 0 15px 0;
             border: none;
-            background: #f2f2f2;
+            background: white;
             resize: none;
-            min-height: 150px;
+            min-height: 100px;
         }
         /* When the textarea gets focus, do something */
         
         .form-container textarea:focus {
-            background-color: #ddd;
+            background-color: white;
+            border-color: rgb(249, 179, 13);
+            border-width: 20px;
             outline: none;
+        }
+        
+        .form-container iframe {
+            padding: 0px;
         }
         /* Set a style for the submit/send button */
         
         .form-container .btn {
-            background-color: #4CAF50;
+            background-color: rgb(249, 179, 13);
+            padding: 18px;
             color: white;
-            padding: 16px 20px;
             border: none;
             cursor: pointer;
             width: 100%;
-            margin-bottom: 10px;
-            opacity: 0.8;
+            border-radius: 25px;
+            margin-bottom: 2px;
+            /*opacity: 0.8;*/
         }
         /* Add a red background color to the cancel button */
         
         .form-container .cancel {
-            background-color: rgb(15, 68, 253);
+            background-color: rgb(28, 38, 60);
+            margin-top: 2px;
         }
         /* Add some hover effects to buttons */
         
