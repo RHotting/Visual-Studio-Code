@@ -60,7 +60,7 @@
             position: fixed;
             bottom: 20px;
             right: 100px;
-            border: 3px solid #f1f1f1;
+            border: 3px solid white;
             z-index: 9;
             box-shadow: 0 -1.5px 3px rgba(0, 0, 0, 0.18), 1.5px 0px 3px rgba(0, 0, 0, 0.23);
         }
@@ -69,7 +69,7 @@
         .form-container {
             max-width: 400px;
             padding: 10px;
-            background-color: rgb(241, 241, 241);
+            background-color: white;
             opacity: 3;
         }
         /* Full-width textarea */
@@ -77,20 +77,21 @@
         .form-container textarea {
             width: 100%;
             padding: 10px;
-            border-width: 20px;
-            border-color: rgb(249, 179, 13);
+            border-width: 2px;
+            border-color: whitesmoke;
             margin: 5px 0 15px 0;
-            border: none;
-            background: white;
+            background: whitesmoke;
             resize: none;
             min-height: 100px;
+            outline: none;
         }
         /* When the textarea gets focus, do something */
         
         .form-container textarea:focus {
             background-color: white;
-            border-color: rgb(249, 179, 13);
-            border-width: 20px;
+            border-color: rgb(3, 60, 240);
+            color: rgb(3, 60, 240);
+            border-width: 1px;
             outline: none;
         }
         
@@ -100,10 +101,11 @@
         /* Set a style for the submit/send button */
         
         .form-container .btn {
-            background-color: rgb(249, 179, 13);
-            padding: 18px;
-            color: white;
-            border: none;
+            background-color: white;
+            padding: 15px;
+            color: rgb(249, 179, 13);
+            border-color: rgb(249, 179, 13);
+            border: 100%;
             cursor: pointer;
             width: 100%;
             border-radius: 25px;
@@ -113,12 +115,29 @@
         /* Add a red background color to the cancel button */
         
         .form-container .cancel {
-            background-color: rgb(28, 38, 60);
+            background-color: white;
+            border-color: rgb(3, 60, 240);
             margin-top: 2px;
+            color: rgb(3, 60, 240);
         }
         /* Add some hover effects to buttons */
         
-        .form-container .btn:hover,
+        .form-container .btn:hover {
+            background-color: rgb(249, 179, 13);
+            color: white;
+        }
+        
+        .form-container .cancel:hover {
+            background-color: rgb(3, 60, 240);
+            color: white;
+        }
+        
         .open-button:hover {
             opacity: 1;
+        }
+        
+        .form-container .btn,
+        .form-container .cancel {
+            display: inline-block;
+            width: 180px;
         }
